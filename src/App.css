@@ -54,8 +54,12 @@ body {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
 }
 
 .form label {
@@ -87,6 +91,28 @@ body {
   font-size: 3rem;
 }
 
+.checkbox {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.submit__btn {
+  font-size: 2.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  font-weight: 600;
+  background-color: rgb(59, 125, 166);
+  border: 0;
+  transition: background-color 0.3s;
+}
+
+.submit__btn:hover {
+  background-color: rgb(49, 109, 147);
+  transition: background-color 0.3;
+  cursor: pointer;
+}
+
 .cross__icon {
   font-size: 3rem;
   align-self: flex-end;
@@ -98,4 +124,23 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cross__icon:hover {
+  background-color: rgb(49, 109, 147);
+  transition: background-color 0.3s;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 20;
 }
