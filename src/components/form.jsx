@@ -7,6 +7,7 @@ function Form(props) {
     setAuthor,
     setTitle,
     setPages,
+    setIsRead,
     handleSubmit,
   } = props;
 
@@ -48,7 +49,11 @@ function Form(props) {
           />
         </div>
         <div className="checkbox__div">
-          <input type="checkbox" className="checkbox" />
+          <input
+            type="checkbox"
+            className="checkbox"
+            onChange={(event) => setIsRead(event.target.checked)}
+          />
           <h3 className="checkbox__label">Have you read this book?</h3>
           <button className="submit__btn">Submit</button>
         </div>

@@ -144,3 +144,43 @@ body {
   width: 100%;
   z-index: 20;
 }
+.books__list {
+  width: 80%;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list__item {
+  background-color: #fff;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book__title {
+  font-size: 4rem;
+}
+
+.book__author {
+  font-size: 3rem;
+}
+
+.read__btn {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  color: #fff;
+  background-color: rgb(59, 125, 166);
+  border: 0;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.read__btn:hover {
+  background-color: rgb(49, 109, 147);
+  transition: background-color 0.3s;
+}

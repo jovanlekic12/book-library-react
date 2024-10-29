@@ -11,7 +11,8 @@ function App() {
   const [isRead, setIsRead] = useState(false);
   const [isFormOpened, setIsFormOpened] = useState(false);
 
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault();
     handleAddBook();
     setIsFormOpened(!isFormOpened);
   }
@@ -45,6 +46,7 @@ function App() {
           setAuthor={setAuthor}
           setTitle={setTitle}
           setPages={setPages}
+          setIsRead={setIsRead}
           isFormOpened={isFormOpened}
           setIsFormOpened={setIsFormOpened}
           handleSubmit={handleSubmit}
@@ -62,6 +64,7 @@ function App() {
                 author={author}
                 pages={pages}
                 isRead={isRead}
+                setIsRead={setIsRead}
                 key={self.crypto.randomUUID()}
               />
             )

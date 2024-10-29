@@ -1,5 +1,5 @@
 function Book(props) {
-  const { title, author, pages, isRead } = props;
+  const { title, author, pages, isRead, setIsRead } = props;
   return (
     <li className="list__item">
       <h1 className="book__title">{title}</h1>
@@ -8,7 +8,9 @@ function Book(props) {
         {pages} {pages > 1 ? "pages" : "page"}
       </h2>
       <div className="book__btn__container">
-        <button className="read__btn">{isRead ? "✔Read" : "❌Read"}</button>
+        <button className="read__btn" onClick={() => setIsRead(!isRead)}>
+          {isRead ? "✔Read" : "❌Read"}
+        </button>
       </div>
     </li>
   );
