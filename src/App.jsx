@@ -1,6 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Form from "./components/form";
 import "./App.css";
 
 function App() {
@@ -14,6 +13,7 @@ function App() {
         grow
       </h3>
       <button className="new__book__btn">New Book</button>
+      <Form />
     </main>
   );
 }

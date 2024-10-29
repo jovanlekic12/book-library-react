@@ -46,3 +46,56 @@ body {
   background-color: rgb(49, 109, 147);
   transition: background-color 0.3s;
 }
+
+.form {
+  background-color: #fff;
+  width: fit-content;
+  padding: 10rem 5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.form label {
+  font-size: 5rem;
+}
+
+.form input {
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 0;
+}
+
+.input__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.checkbox__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.checkbox__label {
+  font-size: 3rem;
+}
+
+.cross__icon {
+  font-size: 3rem;
+  align-self: flex-end;
+  margin-bottom: 3rem;
+  color: #fff;
+  background-color: rgb(59, 125, 166);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
