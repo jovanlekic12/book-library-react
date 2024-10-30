@@ -151,6 +151,9 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 2rem;
 }
 
 .list__item {
@@ -159,6 +162,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem 8rem;
+  border-radius: 5rem;
 }
 
 .book__title {
@@ -167,11 +172,20 @@ body {
 
 .book__author {
   font-size: 3rem;
+  margin: 2rem 0;
 }
 
-.read__btn {
+.book__btn__container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.book__btn {
   font-size: 2rem;
-  padding: 0.5rem 1rem;
+  /* width: 10rem; */
+  /* height: 4rem; */
+  padding: 0.8rem 2rem;
   border-radius: 5rem;
   color: #fff;
   background-color: rgb(59, 125, 166);
@@ -180,7 +194,7 @@ body {
   cursor: pointer;
 }
 
-.read__btn:hover {
+.book__btn:hover {
   background-color: rgb(49, 109, 147);
   transition: background-color 0.3s;
 }

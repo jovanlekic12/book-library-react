@@ -17,8 +17,24 @@ function App() {
     setIsFormOpened(!isFormOpened);
   }
 
+  function handleDeleteBook(id) {
+    setBooks((prev) => prev.filter((book) => book.id !== id));
+  }
+
+  function handleIsRead(id) {
+    const newBooks = books.map((book) => {
+      if (book.id === id) {
+        return { ...book, isRead: !book.isRead };
+      } else {
+        return book;
+      }
+    });
+    setBooks(newBooks);
+  }
+
   function handleAddBook() {
     const newBook = {
+      id: self.crypto.randomUUID(),
       title: title,
       author: author,
       pages: pages,
@@ -26,6 +42,7 @@ function App() {
       isEditing: false,
     };
     setBooks((prev) => [...prev, newBook]);
+    setIsRead(false);
   }
 
   return (
@@ -60,12 +77,10 @@ function App() {
             books && (
               <Book
                 {...book}
-                title={title}
-                author={author}
-                pages={pages}
-                isRead={isRead}
                 setIsRead={setIsRead}
-                key={self.crypto.randomUUID()}
+                handleDeleteBook={handleDeleteBook}
+                handleIsRead={handleIsRead}
+                key={book.id}
               />
             )
           );
