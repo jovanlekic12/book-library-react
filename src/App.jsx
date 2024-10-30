@@ -32,6 +32,17 @@ function App() {
     setBooks(newBooks);
   }
 
+  function handleEditing(id) {
+    const newBooks = books.map((book) => {
+      if (book.id === id) {
+        return { ...book, isEditing: !book.isEditing };
+      } else {
+        return { ...book, isEditing: false };
+      }
+    });
+    setBooks(newBooks);
+  }
+
   function handleAddBook() {
     const newBook = {
       id: self.crypto.randomUUID(),
@@ -80,6 +91,7 @@ function App() {
                 setIsRead={setIsRead}
                 handleDeleteBook={handleDeleteBook}
                 handleIsRead={handleIsRead}
+                handleEditing={handleEditing}
                 key={book.id}
               />
             )
