@@ -165,6 +165,7 @@ body {
   align-items: center;
   padding: 4rem 8rem;
   border-radius: 5rem;
+  border-bottom: #444 1px solid;
 }
 
 .book__title {

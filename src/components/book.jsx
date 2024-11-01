@@ -1,3 +1,4 @@
+import { useState } from "react";
 import EditForm from "./editForm";
 
 function Book(props) {
@@ -13,16 +14,27 @@ function Book(props) {
     handleEditing,
   } = props;
 
+  const [bookTitle, setBookTitle] = useState(title);
+  const [bookAuthor, setBookAuthor] = useState(author);
+  const [bookPages, setBookPages] = useState(pages);
+
   return (
     <li className="list__item">
       {isEditing ? (
-        <EditForm title={title} author={author} pages={pages}></EditForm>
+        <EditForm
+          bookTitle={bookTitle}
+          bookAuthor={bookAuthor}
+          bookPages={bookPages}
+          setBookAuthor={setBookAuthor}
+          setBookTitle={setBookTitle}
+          setBookPages={setBookPages}
+        ></EditForm>
       ) : (
         <div className="book__info__div">
-          <h1 className="book__title">{title}</h1>
-          <h1 className="book__author">{author}</h1>
+          <h1 className="book__title">{bookTitle}</h1>
+          <h1 className="book__author">{bookAuthor}</h1>
           <h2 className="book__pages">
-            {pages} {pages > 1 ? "pages" : "page"}
+            {bookPages} {bookPages > 1 ? "pages" : "page"}
           </h2>
         </div>
       )}
